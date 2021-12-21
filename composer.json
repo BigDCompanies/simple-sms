@@ -1,5 +1,5 @@
 {
-    "name": "serich159/simple-sms",
+    "name": "bigdcompanies/simple-sms",
     "description": "Simple-SMS is a package made for Laravel to send/receive (polling/pushing) text messages.  Currently supports CalLFire, EZTexting, Email Gateways, FlowRoute, LabsMobile, Mozeo, Nexmo, Plivo, Twilio, and Zenvia",
     "keywords": ["sms", "laravel", "text messages", "send", "receive", "CallFire", "EZTexting", "SMS Email Gateways", "FlowRoute", "LabsMobile", "Mozeo", "Nexmo", "Plivo", "Twilio", "Zenvia"],
     "homepage": "http://www.simplesoftware.io",
@@ -8,6 +8,10 @@
         {
             "name": "Simple Software LLC",
             "email": "support@simplesoftware.io"
+        },
+        {
+            "name": "Big D Companies",
+            "email": "automationsupport@bigdco.com"
         }
     ],
     "require": {
