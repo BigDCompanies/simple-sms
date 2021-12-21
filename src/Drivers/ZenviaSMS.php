@@ -165,7 +165,7 @@ class ZenviaSMS extends AbstractSMS implements DriverInterface
      */
     public function receive($raw)
     {
-        $raw = $raw->get('callbackMoRequest');
+        $raw = $raw->input('callbackMoRequest');
         $incomingMessage = $this->createIncomingMessage();
         $incomingMessage->setRaw($raw);
         $incomingMessage->setMessage($raw['body']);

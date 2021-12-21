@@ -222,11 +222,11 @@ class NexmoSMS extends AbstractSMS implements DriverInterface
     public function receive($raw)
     {
         $incomingMessage = $this->createIncomingMessage();
-        $incomingMessage->setRaw($raw->get());
-        $incomingMessage->setMessage($raw->get('text'));
-        $incomingMessage->setFrom($raw->get('msisdn'));
-        $incomingMessage->setId($raw->get('messageId'));
-        $incomingMessage->setTo($raw->get('to'));
+        $incomingMessage->setRaw($raw->input());
+        $incomingMessage->setMessage($raw->input('text'));
+        $incomingMessage->setFrom($raw->input('msisdn'));
+        $incomingMessage->setId($raw->input('messageId'));
+        $incomingMessage->setTo($raw->input('to'));
 
         return $incomingMessage;
     }

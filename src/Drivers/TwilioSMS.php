@@ -139,11 +139,11 @@ class TwilioSMS extends AbstractSMS implements DriverInterface
         }
 
         $incomingMessage = $this->createIncomingMessage();
-        $incomingMessage->setRaw($raw->get());
-        $incomingMessage->setMessage($raw->get('Body'));
-        $incomingMessage->setFrom($raw->get('From'));
-        $incomingMessage->setId($raw->get('MessageSid'));
-        $incomingMessage->setTo($raw->get('To'));
+        $incomingMessage->setRaw($raw->input());
+        $incomingMessage->setMessage($raw->input('Body'));
+        $incomingMessage->setFrom($raw->input('From'));
+        $incomingMessage->setId($raw->input('MessageSid'));
+        $incomingMessage->setTo($raw->input('To'));
 
         return $incomingMessage;
     }

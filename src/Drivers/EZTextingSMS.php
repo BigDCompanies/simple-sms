@@ -125,11 +125,11 @@ class EZTextingSMS extends AbstractSMS implements DriverInterface
     {
         //Due to the way EZTexting handles Keyword Submits vs Replys
         //We must check both values.
-        $from = $raw->get('PhoneNumber') ? $raw->get('PhoneNumber') : $raw->get('from');
-        $message = $raw->get('Message') ? $raw->get('Message') : $raw->get('message');
+        $from = $raw->input('PhoneNumber') ? $raw->input('PhoneNumber') : $raw->input('from');
+        $message = $raw->input('Message') ? $raw->input('Message') : $raw->input('message');
 
         $incomingMessage = $this->createIncomingMessage();
-        $incomingMessage->setRaw($raw->get());
+        $incomingMessage->setRaw($raw->input());
         $incomingMessage->setFrom($from);
         $incomingMessage->setMessage($message);
         $incomingMessage->setTo('313131');

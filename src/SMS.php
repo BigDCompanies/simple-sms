@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Container\Container;
 use Illuminate\Queue\QueueManager;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Request;
 use SimpleSoftwareIO\SMS\Drivers\DriverInterface;
 use SuperClosure\Serializer;
 
@@ -247,7 +248,8 @@ class SMS
     public function receive()
     {
         //Passes all of the request onto the driver.
-        $raw = $this->container['Illuminate\Support\Facades\Request'];
+        $raw = $this->container[Request::class];
+        $raw = $raw->getFacadeRoot();
 
         return $this->driver->receive($raw);
     }

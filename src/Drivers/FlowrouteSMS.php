@@ -101,11 +101,11 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
     public function receive($raw)
     {
         $incomingMessage = $this->createIncomingMessage();
-        $incomingMessage->setRaw($raw->get());
-        $incomingMessage->setMessage($raw->get('body'));
-        $incomingMessage->setFrom($raw->get('from'));
-        $incomingMessage->setId($raw->get('id'));
-        $incomingMessage->setTo($raw->get('to'));
+        $incomingMessage->setRaw($raw->input());
+        $incomingMessage->setMessage($raw->input('body'));
+        $incomingMessage->setFrom($raw->input('from'));
+        $incomingMessage->setId($raw->input('id'));
+        $incomingMessage->setTo($raw->input('to'));
 
         return $incomingMessage;
     }

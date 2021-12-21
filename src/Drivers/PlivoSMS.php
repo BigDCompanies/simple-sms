@@ -127,11 +127,11 @@ class PlivoSMS extends AbstractSMS implements DriverInterface
         }
 
         $incomingMessage = $this->createIncomingMessage();
-        $incomingMessage->setRaw($raw->get());
-        $incomingMessage->setMessage($raw->get('resource_uri'));
-        $incomingMessage->setFrom($raw->get('from_number'));
-        $incomingMessage->setId($raw->get('message_uuid'));
-        $incomingMessage->setTo($raw->get('to_number'));
+        $incomingMessage->setRaw($raw->input());
+        $incomingMessage->setMessage($raw->input('resource_uri'));
+        $incomingMessage->setFrom($raw->input('from_number'));
+        $incomingMessage->setId($raw->input('message_uuid'));
+        $incomingMessage->setTo($raw->input('to_number'));
 
         return $incomingMessage;
     }
