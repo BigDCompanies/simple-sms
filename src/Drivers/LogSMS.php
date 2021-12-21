@@ -2,7 +2,7 @@
 
 namespace SimpleSoftwareIO\SMS\Drivers;
 
-use Illuminate\Log\Writer;
+use Psr\Log\LoggerInterface;
 use SimpleSoftwareIO\SMS\DoesNotReceive;
 use SimpleSoftwareIO\SMS\OutgoingMessage;
 
@@ -20,9 +20,9 @@ class LogSMS implements DriverInterface
     /**
      * Create the CallFire instance.
      *
-     * @param Illuminate\Log\Writer $logger
+     * @param LoggerInterface $logger
      */
-    public function __construct(Writer $logger)
+    public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
     }

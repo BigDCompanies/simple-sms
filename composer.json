@@ -12,11 +12,11 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "illuminate/mail": ">=5.0.0",
-        "illuminate/log": ">=5.0.0",
-        "illuminate/queue": ">=5.0.0",
-        "illuminate/support": ">=5.0.0",
-        "illuminate/view": ">=5.0.0",
+        "illuminate/mail": "^6.0",
+        "illuminate/log": "^6.0",
+        "illuminate/queue": "^6.0",
+        "illuminate/support": "^6.0",
+        "illuminate/view": "^6.0",
         "guzzlehttp/guzzle": "~6",
         "twilio/sdk": "~5",
         "plivo/plivo-php": "^1.0"
